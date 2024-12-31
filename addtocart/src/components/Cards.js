@@ -1,26 +1,26 @@
-import React, { useState } from 'react'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import Cardsdata from '../data/CardsData'
+import React, { useState } from "react";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/Button";
+import Cardsdata from "../data/CardsData";
+import { useDispatch } from "react-redux";
+import { ADD } from "../redux/actions/action";
 import "./style.css";
-import { useDispatch } from 'react-redux';
-import { ADD } from '../redux/actions/action';
 
 const Cards = () => {
 
-  const [data, setData] = useState(Cardsdata);
-  // console.log(data);
+    const [data, setData] = useState(Cardsdata);
+    // console.log(data);
+  
+  
+    const dispatch = useDispatch();
+  
+  
+    const send = (e)=>{
+      // console.log(e);
+      dispatch(ADD(e));
+    }
 
-
-  const dispatch = useDispatch();
-
-
-  const send = (e)=>{
-    // console.log(e);
-    dispatch(ADD(e));
-  }
-
-  return (
+      return (
     <div className='container mt-3'>
       <h2 className='text-center'>Add to Cart Projects</h2>
 
