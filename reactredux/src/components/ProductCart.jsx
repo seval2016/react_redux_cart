@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ProductCart = () => {
+const ProductCart = ({dt}) => {
   return (
     <div>
       Product Cart

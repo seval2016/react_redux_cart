@@ -1,10 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { dataSlice } from './dataSlice'
-import { modalSlice } from './modalSlice'
+import { configureStore } from '@reduxjs/toolkit';
+import { modalSlice } from './modalSlice';
+import { dataSlice } from './dataSlice';
 
 export const store = configureStore({
   reducer: {
-    data: dataSlice,
-    modal: modalSlice
+    data: dataSlice.reducer,  // .reducer eklenmeli
+    modal: modalSlice.reducer,  // .reducer eklenmeli
   },
-})
+});
